@@ -16,9 +16,7 @@ client.login(process.env.TOKEN);
 
 client.once(Events.ClientReady, (c) => {
   console.log(`Ready! Logged in as ${c.user.tag}`);
-  client.commands = new Collection();
-  client.buttons = new Collection();
-  client.modals = new Collection();
+});
 
   const controllers = fs
     .readdirSync("./src/controllers")
